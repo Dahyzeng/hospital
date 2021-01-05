@@ -19,9 +19,9 @@ export default class extends Vue {
     return <Right />;
   }
 
-  public onClickLeft() {}
+  public onClickLeft() { }
 
-  public onClickRight() {}
+  public onClickRight() { }
 
   public render() {
     return (
@@ -43,9 +43,7 @@ export default class extends Vue {
             }}
           ></van-nav-bar>
         </header>
-        <section>
-          <router-view />
-        </section>
+        <router-view />
         <footer></footer>
       </section>
     );
