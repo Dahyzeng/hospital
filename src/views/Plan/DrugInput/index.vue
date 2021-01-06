@@ -27,6 +27,28 @@
       required
       placeholder="请填写用法用量"
     />
+    <van-field
+      name="name"
+      :value="value"
+      @click="showPicker = true"
+      label-class="plan-label"
+      label="饭前饭后"
+      required
+      placeholder="请填写用法用量"
+    />
+    <van-field
+      name="name"
+      :value="value"
+      @click="showPicker = true"
+      label-class="plan-label"
+      label="服用周期"
+      required
+      placeholder="请选择起始日期"
+    />
+    <div class="operation">
+      <a>清空</a>
+      <a>删除药品</a>
+    </div>
   </div>
 </template>
 

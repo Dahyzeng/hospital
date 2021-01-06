@@ -1,34 +1,43 @@
 <template>
   <div class="plan">
-    <header>
-      <img alt="Vue logo" src="../../assets/config1.png" />
-    </header>
-    <van-form>
-      <van-field
-        readonly
-        clickable
-        name="picker"
-        :value="value"
-        @click="showPicker = true"
-        label-class="plan-label"
-        label="疾病分期"
-        required
-        placeholder="请选择疾病分期"
-        right-icon="arrow"
-      />
-      <van-popup v-model="showPicker" position="bottom">
-        <van-picker
-          show-toolbar
-          :columns="columns"
-          @confirm="onConfirm"
-          @cancel="showPicker = false"
+    <div class="plan-info">
+      <header>
+        <img alt="Vue logo" src="../../assets/config1.png" />
+      </header>
+      <van-form>
+        <van-field
+          readonly
+          clickable
+          name="picker"
+          :value="value"
+          @click="showPicker = true"
+          label-class="plan-label"
+          label="疾病分期"
+          required
+          placeholder="请选择疾病分期"
+          right-icon="arrow"
         />
-      </van-popup>
-      <drug-input />
-    </van-form>
-    <div>
-      <van-button icon="add-o" class="plan-button">添加用药</van-button>
-      <van-button class="plan-button">配症状问卷</van-button>
+        <van-popup v-model="showPicker" position="bottom">
+          <van-picker
+            show-toolbar
+            :columns="columns"
+            @confirm="onConfirm"
+            @cancel="showPicker = false"
+          />
+        </van-popup>
+        <drug-input />
+        <drug-input />
+      </van-form>
+      <div>
+        <van-button icon="add-o" class="plan-button">添加用药</van-button>
+        <van-button class="plan-button">
+          <img src="./../../assets/wenjuan.png" />
+          配症状问卷
+        </van-button>
+      </div>
+    </div>
+    <div class="footer">
+      <van-button>完成</van-button>
     </div>
   </div>
 </template>

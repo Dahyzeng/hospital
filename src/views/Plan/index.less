@@ -1,13 +1,26 @@
 .plan {
   background-color: #f8f8f8;
-  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   header {
     font-size: 0;
     img {
       width: 100%;
     }
   }
- 
+  .van-cell {
+    line-height: 1.63rem;
+    padding: 0 0.5rem;
+    font-size: 0.5rem;
+    input {
+      font-size: 0.44rem;
+    }
+    &::after {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
   .plan-label {
     height: 1.63rem;
     font-size: 0.5rem;
@@ -15,13 +28,34 @@
     color: #000000;
     line-height: 22px;
   }
+
   .plan-button {
     color: #28D190;
     font-size: 0.53rem;
-    width: 4.75rem;
+    // width: 4.75rem;
     height: 1.88rem;
     &:first-child {
       margin-right: 0.58rem;
     }
+    .van-button__text{
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.footer {
+  background-color: #fff;
+  padding: 0.56rem 0;
+  margin-top: 0.94rem;
+  font-size: 0;
+  button {
+    color: #fff;
+    font-size: 0.53rem;
+    width: 9.66rem;
+    height: 1.31rem;
+    background: linear-gradient(140deg, #327EFF 0%, #00DCFF 100%);
+    box-shadow: 0rem 0.13rem 0.19rem 0rem rgba(45, 116, 231, 0.34);
+    border-radius: 0.63rem;
   }
 }
