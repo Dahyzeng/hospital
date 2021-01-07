@@ -1,29 +1,27 @@
 <template>
   <div class="psq">
-    <div>
-      <header>
-        <img alt="Vue logo" src="../../assets/symptom.png" />
-      </header>
-      <van-checkbox-group v-model="result">
-        <van-cell-group>
-          <van-cell
-            v-for="(item, index) in symptonList"
-            clickable
-            :key="item"
-            :title="`${item}`"
-            @click="toggle(index)"
-          >
-            <template #right-icon>
-              <van-checkbox
-                :name="item"
-                ref="checkboxes"
-                checked-color="#28D190"
-              />
-            </template>
-          </van-cell>
-        </van-cell-group>
-      </van-checkbox-group>
-    </div>
+    <header>
+      <img alt="Vue logo" src="../../assets/symptom.png" />
+    </header>
+    <van-checkbox-group v-model="result">
+      <van-cell-group>
+        <van-cell
+          v-for="(item, index) in symptonList"
+          clickable
+          :key="item"
+          :title="`${item}`"
+          @click="toggle(index)"
+        >
+          <template #right-icon>
+            <van-checkbox
+              :name="item"
+              ref="checkboxes"
+              checked-color="#28D190"
+            />
+          </template>
+        </van-cell>
+      </van-cell-group>
+    </van-checkbox-group>
     <div class="footer">
       <van-button>发布</van-button>
     </div>
