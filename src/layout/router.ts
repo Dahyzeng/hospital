@@ -18,6 +18,10 @@ export default {
       component: () => import("@/views/Plan/index.vue"),
     },
     {
+      path: "/base-info",
+      component: () => import("@/views/base-info/index.vue"),
+    },
+    {
       path: "/psq",
       meta: {
         title: "配置用药反应症状问卷",
