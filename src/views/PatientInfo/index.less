@@ -1,0 +1,68 @@
+.patient-info {
+  background-color: #f8f8f8;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .van-cell {
+    line-height: 1.63rem;
+    padding: 0 0.5rem;
+    font-size: 0.5rem;
+
+    input {
+      font-size: 0.44rem;
+    }
+    &::before {
+      font-size: 0.5rem;
+    }
+    &::after {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .info-label {
+    height: 1.63rem;
+    font-size: 0.5rem;
+    font-weight: 400;
+    color: #000000;
+  }
+
+  .info-button {
+    color: #28d190;
+    font-size: 0.53rem;
+    // width: 4.75rem;
+    height: 1.88rem;
+
+    &:first-child {
+      margin-right: 0.58rem;
+    }
+
+    .van-button__text {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.textarea-label {
+  background-color: #fff;
+  text-align: left;
+  font-size: 0.5rem;
+  color: #000000;
+  padding: 0.44rem 0 0 0.47rem;
+}
+.footer {
+  background-color: #fff;
+  padding: 0.56rem 0;
+  margin-top: 0.94rem;
+  font-size: 0;
+
+  button {
+    color: #fff;
+    font-size: 0.53rem;
+    width: 9.66rem;
+    height: 1.31rem;
+    background: linear-gradient(140deg, #327eff 0%, #00dcff 100%);
+    box-shadow: 0rem 0.13rem 0.19rem 0rem rgba(45, 116, 231, 0.34);
+    border-radius: 0.63rem;
+  }
+}
