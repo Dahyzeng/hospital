@@ -1,9 +1,9 @@
 <template>
   <div class="patient-info">
     <div>
-      <van-form>
+      <van-form @submit="handleFormSubmit">
         <van-field
-          name="name"
+          name="tel"
           :value="value"
           label="手机号"
           label-class="info-label"
@@ -21,7 +21,7 @@
         <van-field
           readonly
           clickable
-          name="picker"
+          name="sex"
           :value="value"
           @click="showPicker = true"
           label-class="info-label"
@@ -46,7 +46,7 @@
           required
           placeholder="请输入"
         />
-        <div :style="{margin: '0.63rem 0'}">
+        <div :style="{ margin: '0.63rem 0' }">
           <van-field
             readonly
             clickable
@@ -82,7 +82,7 @@
           <van-popup v-model="showPicker" position="bottom">
             <van-picker
               show-toolbar
-              :columns="columns"
+              :columns="sexList"
               @confirm="onConfirm"
               @cancel="showPicker = false"
             />
@@ -99,7 +99,7 @@
             placeholder="请输入"
           />
         </div>
-        <div :style="{margin: '0.63rem 0'}">
+        <div :style="{ margin: '0.63rem 0' }">
           <div class="textarea-label">备注</div>
           <van-field
             v-model="comment"
@@ -132,12 +132,16 @@ import { Form, Picker, Field, Popup, Button } from "vant";
 })
 export default class Home extends Vue {
   showPicker = false;
+  sexList = ["男", "女"];
   columns = ["杭州", "宁波", "温州", "嘉兴", "湖州"];
   value = "";
   comment = "";
   onConfirm = () => {
     this.showPicker = true;
   };
+  public handleFormSubmit(values: any) {
+    console.log();
+  }
 }
 </script>
 <style lang="less">

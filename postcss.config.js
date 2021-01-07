@@ -11,6 +11,10 @@ module.exports = {
         //'last 10 versions', // 所有主流浏览器最近10版本用
       ],
       grid: true
+    }),
+    require("postcss-pxtorem")({
+      rootValue: 32,
+      propList: ['*'],
     })
   ]
 };

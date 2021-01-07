@@ -43,7 +43,7 @@ export default {
       component: () => import("@/views/PatientInfo/index.vue"),
     },
     {
-      path: "/medical_records",
+      path: "/medical-records",
       meta: {
         title: "病例档案",
       },
