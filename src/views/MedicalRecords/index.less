@@ -1,0 +1,52 @@
+.medical-records {
+  background: #f3f4fa;
+  min-height: 100%;
+  padding: 1rem 0.31rem;
+  .record-unit {
+    padding: 0.31rem;
+    margin-top: 0.31rem;
+    background-color: #eff5ff;
+    border-radius: 0.06rem;
+    .unit-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.13rem;
+      .title {
+        font-size: 0.44rem;
+        line-height: 0.63rem;
+        color: #000000;
+      }
+      .detail {
+        font-size: 0.41rem;
+        color: #2d74e7;
+        i {
+          vertical-align: middle;
+          width: 0.19rem;
+        }
+      }
+    }
+    .content {
+      font-size: 0.44rem;
+      font-weight: 400;
+      color: #666666;
+      line-height: 0.63rem;
+      text-align: left;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    }
+    .img-part {
+      display: flex;
+      margin-top: 0.31rem;
+      img {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.31rem;
+        object-fit: scale-down;
+        border-radius: 0.13rem;
+        border: 0.02rem solid rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}

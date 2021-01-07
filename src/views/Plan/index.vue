@@ -30,10 +30,12 @@
       </van-form>
       <div>
         <van-button icon="add-o" class="plan-button">添加用药</van-button>
-        <van-button class="plan-button">
-          <img src="./../../assets/wenjuan.png" />
-          配症状问卷
-        </van-button>
+        <router-link to="/psq">
+          <van-button class="plan-button">
+            <img src="./../../assets/wenjuan.png" />
+            配症状问卷
+          </van-button>
+        </router-link>
       </div>
     </div>
     <div class="footer">
