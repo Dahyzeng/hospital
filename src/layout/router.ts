@@ -8,6 +8,10 @@ export default {
     {
       path: '/plan',
       component: () => import("@/views/Plan/index.vue"),
+    },
+    {
+      path: "/base-info",
+      component: () => import("@/views/base-info/index.vue"),
     }
   ]
 } as RouteConfig;
