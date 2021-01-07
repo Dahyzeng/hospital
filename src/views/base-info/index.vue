@@ -4,7 +4,7 @@
             <div class="height10"/>
             <van-field class="avatar" name="uploader" label="头像">
                 <template #input>
-                    <van-uploader v-model="uploader"/>
+                    <img src="../../assets/avtar.png"/>
                 </template>
             </van-field>
             <div class="height10"/>
@@ -12,32 +12,22 @@
                 <van-field
                         name="姓名"
                         :value="value"
-                        label-class="plan-label"
                         label="姓名"
-                        required
                 />
                 <van-field
                         name="手机号码"
                         :value="value"
-                        label-class="plan-label"
                         label="手机号码"
-                        required
                 />
                 <van-field
                         name="医院"
                         :value="value"
-                        label-class="plan-label"
                         label="医院"
-                        required
                 />
                 <van-field
-                        readonly
-                        clickable
                         name="科室"
                         :value="value"
-                        label-class="plan-label"
                         label="科室"
-                        required
                 />
             </div>
         </van-form>
@@ -72,6 +62,6 @@
         };
     }
 </script>
-<style lang="less" scoped>
+<style lang="less">
     @import url("./base-info.less");
 </style>
