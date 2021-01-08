@@ -1,6 +1,6 @@
 <template>
   <div class="medical-records">
-    <time-line v-for="(item, index) in list">
+    <time-line v-for="(item, index) in list" :key="index">
       <div class="record-unit">
         <div class="unit-header">
           <span class="title">病例资料</span>

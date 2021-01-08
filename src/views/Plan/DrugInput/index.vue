@@ -1,8 +1,7 @@
 <template>
   <div class="drug-input">
     <van-field
-      name="name"
-      :value="value"
+      v-model="drugName"
       @click="showPicker = true"
       label-class="plan-label"
       label="药品名称"
@@ -10,8 +9,7 @@
       placeholder="请输入药品名称"
     />
     <van-field
-      name="name"
-      :value="value"
+      v-model="specification"
       @click="showPicker = true"
       label-class="plan-label"
       label="药品规格"
@@ -19,8 +17,7 @@
       placeholder="请输入药品规格，例2mg*10片"
     />
     <van-field
-      name="name"
-      :value="value"
+      v-model="useMethod"
       @click="showPicker = true"
       label-class="plan-label"
       label="用法用量"
@@ -28,8 +25,7 @@
       placeholder="请填写用法用量"
     />
     <van-field
-      name="name"
-      :value="value"
+      v-model="useTime"
       @click="showPicker = true"
       label-class="plan-label"
       label="饭前饭后"
@@ -37,8 +33,7 @@
       placeholder="请填写用法用量"
     />
     <van-field
-      name="name"
-      :value="value"
+      v-model="period"
       @click="showPicker = true"
       label-class="plan-label"
       label="服用周期"
@@ -53,7 +48,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from "vue-property-decorator";
 import { Picker, Field } from "vant";
 @Component({
   components: {
@@ -62,7 +57,21 @@ import { Picker, Field } from "vant";
   },
 })
 export default class DrugInput extends Vue {
-  value = "";
+  public drugName: string;
+  public specification: string;
+  public useMethod: string;
+  public useTime: number;
+  public period: string;
+  @Prop() info: any;
+  @Prop() onDelete!: () => void;
+  constructor(props: any) {
+    super();
+    this.drugName = this.info.drugName;
+    this.specification = this.info.specification;
+    this.useMethod = this.info.useMethod;
+    this.useTime = this.info.useTime;
+    this.period = this.info.period;
+  }
 }
 </script>
 <style lang="less" scoped>
