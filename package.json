@@ -8,7 +8,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.167",
     "core-js": "^3.6.5",
+    "moment": "^2.29.1",
     "vandoras": "^1.0.0",
     "vant": "^2.12.2",
     "vue": "^2.6.11",

@@ -6,7 +6,7 @@ export default {
   component: () => import("./layout"),
   children: [
     {
-      path: "/plan",
+      path: "/plan/:patientId",
       name: "name",
       meta: {
         title: "用药计划",
